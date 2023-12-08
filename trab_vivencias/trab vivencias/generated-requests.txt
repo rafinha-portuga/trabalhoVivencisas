@@ -1,0 +1,68 @@
+###
+POST http://localhost:8080/usuarios
+Content-Type: application/json
+
+{
+  "email": "TESTE@gmail.com",
+  "nome": "BOB WILSON",
+  "senha": "BOBWILSONARRASA",
+  "tipoUsuario": "1"
+}
+
+###
+POST http://localhost:8080/lojas
+Content-Type: application/json
+
+{
+  "usuario": {
+    "idUsuario": 1
+  },
+  "idLoja": 1,
+  "descricaoLoja": "LOJATESTE",
+  "nomeLoja": "TESTESTESTELOJA"
+}
+
+
+###
+POST http://localhost:8080/produtos
+Content-Type: application/json
+
+{
+  "descricaoProduto": "UMPRODUTODETESTES",
+  "idProduto": 1,
+  "nomeProduto": "TESTEPRODUTO",
+  "preco": 12312.12,
+  "loja": {
+    "idLoja": 1
+  }
+}
+
+###
+POST http://localhost:8080/cupons
+Content-Type: application/json
+
+{
+  "loja": {
+    "idLoja": 1
+  },
+  "produto": {
+    "idProduto": 1
+  },
+  "codigoCupom": "12312",
+  "idCupom": 1,
+  "descontoPercentual": 0.00
+}
+
+
+
+
+###
+GET http://localhost:8080/produtos
+
+###
+GET http://localhost:8080/lojas
+
+###
+GET http://localhost:8080/cupons
+###
+GET http://localhost:8080/usuarios
